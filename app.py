@@ -27,7 +27,7 @@ df = tuition.merge(cost_living, on="country", how="left") \
             .merge(indian_students, on="country", how="left") \
             .merge(reputation, on="university", how="left")
 
-# Step 4: Fill missing data
+# Step 4: Fill missing datagive 
 for col in ["visa_fee_usd", "insurance_usd"]:
     if col not in df.columns:
         df[col] = 0
